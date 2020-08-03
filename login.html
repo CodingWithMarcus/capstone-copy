@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- after user logs in this page should redirect to a 
+landing page that lets them choose whether they want to
+view events, research classes, or create task lists-->
+<html>
+
+    <head>
+        <title> Login </title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-functions.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-storage.js"></script>
+        <script src="app.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="bg"></div>
+
+        <header>
+            <h1> Login </h1>
+
+            <nav>
+                <a href="index.html"> Home </a>
+            </nav>
+        </header>
+
+        <main>
+            <form action="" method="post" name="logform">
+                <label for="email">Email: </label>
+                <input type="email" placeholder="jdoe@example.com" id="email" required/>
+              
+                <label for="password"> Password: </label>
+                <input type="password" name="pass" id="password" required>
+                       
+            </form>
+                
+            <p> <button onclick="signIn()" id="signIn"> Log In</button>
+                     
+            <!-- google login button -->                                      
+            <p><button onclick="googleLogin()"> Login With Google </button> </p>
+            
+            <p>Don't have an account? <a href="register.html"> Create one.</a> </p>
+            <p>If you're already logged in, <a href="landingpage.html">click here :)</a></p>
+    </body>
+</html>

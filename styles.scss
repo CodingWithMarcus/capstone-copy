@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap');
+
+$color-scheme: (
+    //background
+    primary: #12355b,
+    //buttons
+    btn-color: #ff570a,
+    //text
+    text-color: #420039,
+    //links
+    link-color: #d72638,
+    //accents (links hover)
+    accent-color: #ffffff
+);
+
+$padding: 15px;
+
+@function color($color-name){
+    @return map-get($color-scheme, $color-name);
+}
+
+$desktop: 840px; //perfect for switching from mobile to desktop
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+body {
+    font-family: monospace, 'Courier New';
+    text-align: center;
+    font-size: 12pt;
+
+    a {
+        color: color(text-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: color(accent-color);
+    }
+
+    h1 {
+        font-family: 'Satisfy', monospace;
+    }
+
+    header {
+        background-color: color(accent-color);
+        text-align: center;
+        padding: 5%;
+        border-style: double;
+        box-shadow: 5px 5px black;
+    
+        nav {
+            ul.breadcrumb {
+                padding: 4px 8px;
+                list-style: none;
+                background: transparent;
+              }
+              
+              ul.breadcrumb li {display: inline;}
+              
+              ul.breadcrumb li+li:before {
+                padding: 4px;
+                color: color(text-color);
+                content: "/\00a0";
+              }
+              
+              ul.breadcrumb li a {color: color(link-color);}
+              
+              ul.breadcrumb li a:hover {
+                  color: color(accent-color);
+              }
+        }
+    }
+}
+
+main {
+    font-size: 10pt;
+    padding-top: 5%;
+    text-align: center;
+    width: 100%;
+
+    button {
+        padding: $padding;
+        border-radius: 12px;
+        color: color(primary);
+        background-color: color(btn-color);
+        transition: all .2s;
+    }
+
+    button:hover {
+        background-color: color(primary);
+        color: color(btn-color);
+        transition: all .2s;
+    }
+
+    /*[Navigation in main instead
+    of in header]*/
+    ul.breadcrumb {
+        padding: 4px 8px;
+        list-style: none;
+        background: transparent;
+      }
+      
+      ul.breadcrumb li {display: inline;}
+      
+      ul.breadcrumb li+li:before {
+        padding: 4px;
+        color: color(text-color);
+        content: "/\00a0";
+      }
+      
+      ul.breadcrumb li a {color: color(link-color);}
+      
+      ul.breadcrumb li a:hover {
+          color: color(accent-color);
+      }
+
+    form {
+        width: 50%;
+        margin: 2% 7%;
+        display: inline-block;
+
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            width: 100%;
+            padding: 15px;
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=password]:focus {
+            border-color: color(btn-color);
+        }
+
+        input[type=submit] {
+            padding: $padding;
+            border-radius: 12px;
+            color: color(primary);
+            background-color: color(btn-color);
+            transition: all .2s;
+        }
+
+        input[type=submit]:hover {
+            background-color: color(primary);
+            color: color(btn-color);
+            transition: all .2s;
+        }
+    }
+
+    .iframe-container {
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+
+        iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    #worktodo-wrap {
+        box-sizing: border-box;
+        font-size: 0.9em;
+    }
+
+    #worktodo-wrap input[type=text] {
+        padding: 10px 8px;
+    }
+
+    #worktodo-wrap input[type=button],
+    #worktodo-wrap input[type=submit] {
+        padding: 8px 5px;
+        color: #fff;
+        background:#6cc9ff;
+        border: 2px solid #6cc9ff;
+        cursor: pointer;
+    }
+
+    /* [CLEARFIX] */
+    #worktodo-wrap .clearfix {
+        overflow: auto;
+    }
+
+    #worktodo-wrap .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+    /* [WRAPPER] */
+    #worktodo-wrap {
+        max-width: 500px;
+        background: #f2f2f2;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    /* [HEADER] */
+    #worktodo-wrap h2 {
+        font-size: 1.5em;
+        margin: 0;
+        color: #333;
+    }
+
+
+    /* [ADD] */
+    #worktodo-form {
+        margin: 10px 0;
+    }
+
+    #worktodo-form input {
+        display: block;
+        float: left;
+    }
+
+    #worktodo-form input[type=text] {
+        width: 85%;
+    }
+
+    #worktodo-form input[type=submit] {
+        width: 15%;
+        background: #22a4cf;
+        border: 2px solid #22a4cf;
+    }
+
+
+    /* [DELETE] */
+    #worktodo-del {}
+
+
+    /* [LIST ITEMS] */
+    #worktodo-list .clearfix {
+        margin-top: 8px;
+    }
+
+    #worktodo-list .clearfix div, #worktodo-list .clearfix input {
+        box-sizing: border-box;
+        float: left;
+        display: block;
+    }
+
+    #worktodo-list .item {
+        border: 1px solid #ddd;
+        background: #fff;
+        width: 80%;
+        padding: 10px;
+    }
+
+    #worktodo-list .item.cx {
+        background: #ffe1d7;
+        text-decoration: line-through;
+    }
+
+    #worktodo-list .item.done {
+        background: #dcffd7;
+    }
+
+    #worktodo-list .clearfix input {
+        width: 10%;
+    }
+
+    #worktodo-list input.bdone {
+        background: #4aa53d;
+        border: 2px solid #4aa53d;
+    }
+
+    @include desktop {
+        da1,db1,dc1,dd1 { 
+            position: relative;
+            border:1px;
+            float:left;
+            margin-top: 0.2%;
+            margin-left: 0.2%;
+            margin-right: 0.2%;
+        }
+        
+        da2,db2,dc2,dd2 { 
+            position: relative;
+            border:1px;
+            float:left;
+            margin-top: 3%;
+        }
+        
+        textarea {
+            width: 200px;
+        }
+        
+        
+        /* Aligning for second row*/
+        #selects{
+            float:left;
+            margin-top: 5%;
+            margin-left: 20%;
+        }
+        
+        #classification{
+            float:left;
+            margin-top: 7%;
+        }
+        
+        #classsel{
+            float:right;
+            margin-right: 40%;
+            margin-bottom: 5%;
+        }
+        
+        
+        #order{
+            float:left;
+            margin-top: 40%;
+            margin-bottom: 2%;
+            padding: $padding;
+            border-radius: 12px;
+            color: color(primary);
+            background-color: color(btn-color);
+        }
+
+        #order:hover {
+            background-color: color(primary);
+            color: color(btn-color);
+        }
+
+        .iframe-container-4x3{
+            padding-top: 75%;
+        }
+    }
+}

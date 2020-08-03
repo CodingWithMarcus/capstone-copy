@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Lists</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/todo.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-functions.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-storage.js"></script>
+        <script src="app.js"></script>
+</head>
+
+<body>
+
+    <div id="bg"></div>
+
+        <header>
+            <h1> To-Do Lists </h1>
+
+            <nav>
+                <ul class="breadcrumb">
+                    <li><a href="landingpage.html">Home</a></li>
+                    <li><a href="predict.html">Recommendation</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="mylists.html">To-Do Lists</a></li>
+                    <li><a href="classes.html">Class Search</a></li>
+                    <li><a onclick="signOut()" id="signOut" >  Log out </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <!-- For Work Related Tasks-->
+            <div class="work-task">
+
+                <div id="worktodo-wrap">
+                    <h2>Tasks</h2>
+                    <form id="worktodo-form" class="clearfix">
+                        <input type="text" id="worktodo-add" placeholder="New Task" required />
+                        <input type="submit" value="&#10010;" />
+                    </form>
+                
+                <div id="worktodo-del">
+                    <input type="button" value="Delete All Tasks" id="worktodo-dat" />
+                    <input type="button" value="Delete Completed Tasks" id="worktodo-dct" />
+                </div>
+                
+                <div id="worktodo-list"> </div>
+            </div>
+
+        </main>
+</body>
+
+</html>

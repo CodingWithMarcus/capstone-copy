@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- after user creates an account, this page
+should redirect to the home page so that the
+user can login with the info they just put
+into the system
+-->
+<html>
+
+    <head>
+        <title> Create Account </title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-functions.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-storage.js"></script>
+        <script src="app.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="bg"></div>
+        
+        <header>
+            <h1>Create Account</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+
+        <main>
+            <form action="" method="post" name="regform">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="jdoe@example.com" id="email"/>
+
+                <label for="password">Password:</label>
+                <input type="password" placeholder="pass" id="password"/>
+                                   
+            </form>
+            
+            <p><button onclick="signUp()" id="signUp"> Sign Up</button></p>
+
+            <p>Already have an account? <a href="login.html"> Login.</a> </p>
+        </main>
+
+    </body>
+</html>

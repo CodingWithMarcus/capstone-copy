@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events </title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-functions.js"></script>
+        <script src="/__/firebase/7.13.1/firebase-storage.js"></script>
+        <script src="app.js"></script>
+        
+</head>
+
+<body>
+
+    <div id="bg"></div>
+
+        <header>
+            <h1> Events </h1>
+            
+            <nav>
+                <ul class="breadcrumb">
+                    <li><a href="landingpage.html">Home</a></li>
+                    <li><a href="predict.html">Recommendation</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="mylists.html">To-Do Lists</a></li>
+                    <li><a href="classes.html">Class Search</a></li>
+                    <li><a onclick="signOut()" id="signOut" >  Log out </a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+                <div class="iframe-container">
+                    <iframe 
+                        src="http://us1.rssfeedwidget.com/getrss.php?time=1587622673450&amp;x=https%3A%2F%2Fcalendar.usm.edu%2Fcalendar.xml&amp;w=350&amp;h=500&amp;bc=333333&amp;bw=1&amp;bgc=transparent&amp;m=20&amp;it=true&amp;t=(default)&amp;tc=333333&amp;ts=15&amp;tb=transparent&amp;il=true&amp;lc=000073&amp;ls=14&amp;lb=true&amp;id=true&amp;dc=333333&amp;ds=14&amp;idt=true&amp;dtc=284F2D&amp;dts=12" 
+                        hspace="0" vspace="0" frameborder="no" marginwidth="0" marginheight="0"  
+                        id="rssOutput">Reading RSS Feed ...
+                    </iframe>
+                </div>
+        </main>
+
+</body>
+
+</html>

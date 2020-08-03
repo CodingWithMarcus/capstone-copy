@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
+body {
+  font-family: monospace, 'Courier New';
+  text-align: center;
+  font-size: 12pt;
+}
+
+body a {
+  color: #420039;
+  text-decoration: none;
+}
+
+body a:hover {
+  color: #ffffff;
+}
+
+body h1 {
+  font-family: 'Satisfy', monospace;
+}
+
+body header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 5%;
+  border-style: double;
+  -webkit-box-shadow: 5px 5px black;
+          box-shadow: 5px 5px black;
+}
+
+body header nav ul.breadcrumb {
+  padding: 4px 8px;
+  list-style: none;
+  background: transparent;
+}
+
+body header nav ul.breadcrumb li {
+  display: inline;
+}
+
+body header nav ul.breadcrumb li + li:before {
+  padding: 4px;
+  color: #420039;
+  content: "/\00a0";
+}
+
+body header nav ul.breadcrumb li a {
+  color: #d72638;
+}
+
+body header nav ul.breadcrumb li a:hover {
+  color: #ffffff;
+}
+
+main {
+  font-size: 10pt;
+  padding-top: 5%;
+  text-align: center;
+  width: 100%;
+  /*[Navigation in main instead
+    of in header]*/
+  /* [CLEARFIX] */
+  /* [WRAPPER] */
+  /* [HEADER] */
+  /* [ADD] */
+  /* [DELETE] */
+  /* [LIST ITEMS] */
+}
+
+main button {
+  padding: 15px;
+  border-radius: 12px;
+  color: #12355b;
+  background-color: #ff570a;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+main button:hover {
+  background-color: #12355b;
+  color: #ff570a;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+main ul.breadcrumb {
+  padding: 4px 8px;
+  list-style: none;
+  background: transparent;
+}
+
+main ul.breadcrumb li {
+  display: inline;
+}
+
+main ul.breadcrumb li + li:before {
+  padding: 4px;
+  color: #420039;
+  content: "/\00a0";
+}
+
+main ul.breadcrumb li a {
+  color: #d72638;
+}
+
+main ul.breadcrumb li a:hover {
+  color: #ffffff;
+}
+
+main form {
+  width: 50%;
+  margin: 2% 7%;
+  display: inline-block;
+}
+
+main form input[type=text],
+main form input[type=email],
+main form input[type=password] {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+main form input[type=text]:focus,
+main form input[type=email]:focus,
+main form input[type=password]:focus {
+  border-color: #ff570a;
+}
+
+main form input[type=submit] {
+  padding: 15px;
+  border-radius: 12px;
+  color: #12355b;
+  background-color: #ff570a;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+main form input[type=submit]:hover {
+  background-color: #12355b;
+  color: #ff570a;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+main .iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+main .iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+main #worktodo-wrap {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+main #worktodo-wrap input[type=text] {
+  padding: 10px 8px;
+}
+
+main #worktodo-wrap input[type=button],
+main #worktodo-wrap input[type=submit] {
+  padding: 8px 5px;
+  color: #fff;
+  background: #6cc9ff;
+  border: 2px solid #6cc9ff;
+  cursor: pointer;
+}
+
+main #worktodo-wrap .clearfix {
+  overflow: auto;
+}
+
+main #worktodo-wrap .clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+main #worktodo-wrap {
+  max-width: 500px;
+  background: #f2f2f2;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+main #worktodo-wrap h2 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+main #worktodo-form {
+  margin: 10px 0;
+}
+
+main #worktodo-form input {
+  display: block;
+  float: left;
+}
+
+main #worktodo-form input[type=text] {
+  width: 85%;
+}
+
+main #worktodo-form input[type=submit] {
+  width: 15%;
+  background: #22a4cf;
+  border: 2px solid #22a4cf;
+}
+
+main #worktodo-list .clearfix {
+  margin-top: 8px;
+}
+
+main #worktodo-list .clearfix div, main #worktodo-list .clearfix input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  display: block;
+}
+
+main #worktodo-list .item {
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 80%;
+  padding: 10px;
+}
+
+main #worktodo-list .item.cx {
+  background: #ffe1d7;
+  text-decoration: line-through;
+}
+
+main #worktodo-list .item.done {
+  background: #dcffd7;
+}
+
+main #worktodo-list .clearfix input {
+  width: 10%;
+}
+
+main #worktodo-list input.bdone {
+  background: #4aa53d;
+  border: 2px solid #4aa53d;
+}
+
+@media (min-width: 840px) {
+  main {
+    /* Aligning for second row*/
+  }
+  main da1, main db1, main dc1, main dd1 {
+    position: relative;
+    border: 1px;
+    float: left;
+    margin-top: 0.2%;
+    margin-left: 0.2%;
+    margin-right: 0.2%;
+  }
+  main da2, main db2, main dc2, main dd2 {
+    position: relative;
+    border: 1px;
+    float: left;
+    margin-top: 3%;
+  }
+  main textarea {
+    width: 200px;
+  }
+  main #selects {
+    float: left;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  main #classification {
+    float: left;
+    margin-top: 7%;
+  }
+  main #classsel {
+    float: right;
+    margin-right: 40%;
+    margin-bottom: 5%;
+  }
+  main #order {
+    float: left;
+    margin-top: 40%;
+    margin-bottom: 2%;
+    padding: 15px;
+    border-radius: 12px;
+    color: #12355b;
+    background-color: #ff570a;
+  }
+  main #order:hover {
+    background-color: #12355b;
+    color: #ff570a;
+  }
+  main .iframe-container-4x3 {
+    padding-top: 75%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
